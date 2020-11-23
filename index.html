@@ -10,6 +10,17 @@
             #main-header {
                 background-image: url('assets/images/janitors.jpg');
             }
+
+            #list {
+                width: 100%;
+            }
+
+            @media screen and (min-width: 700px) {
+                #list {
+                    width: 330px;
+                    height: 387px;
+                }
+            }
         </style>
     </head>
     <body>
@@ -33,7 +44,7 @@
         </header>
 
         <main class="container">
-            <section class="section stack">
+            <section id="introducao" class="section stack">
                 <h2 class="title">Introdução</h2>
                 <p>
                     Você sabia que há uma grande escassez de informação quando
@@ -65,12 +76,18 @@
                 </p>
             </section>
 
-            <section class="section media">
-                <img
-                    class="image"
-                    src="./assets/images/terceirization.jpg"
-                    alt=""
-                />
+            <section id="terceirizacao" class="section media">
+                <picture>
+                    <source
+                        media="(min-width: 375px) and (max-width: 699.99px)"
+                        srcset="./assets/images/terceirization-md.jpg"
+                    />
+                    <img
+                        class="image"
+                        src="./assets/images/terceirization.jpg"
+                        alt=""
+                    />
+                </picture>
                 <div class="stack">
                     <h2 class="title">Terceirização</h2>
                     <p>
@@ -100,7 +117,7 @@
                 </div>
             </section>
 
-            <section class="section media">
+            <section id="vulnerabilidades" class="section media">
                 <div class="stack">
                     <h2 class="title">Vulnerabi<wbr />lidades</h2>
 
@@ -121,10 +138,10 @@
                     </p>
                 </div>
 
-                <div class="" style="width: 330px; height: 387px">
+                <div id="list">
                     <article class="card media-list">
                         <div class="body stack">
-                            <details class="accordion stack">
+                            <details open class="accordion stack">
                                 <summary class="title">
                                     DOENÇAS OCUPACIONAIS
                                 </summary>
@@ -271,6 +288,161 @@
                     </article>
                 </div>
             </section>
+
+            <section id="legislacao" class="[ section -primary ] full-bleed">
+                <div class="container stack text-align:center">
+                    <h2 class="title">Quer saber mais sobre a legislação?</h2>
+                    <p>
+                        Saiba quais são os seus direitos de acordo com a
+                        constituição e como eles podem te ajudar nesta sessão do
+                        site dedicada em te explicar de forma simples e
+                        objetiva.
+                    </p>
+
+                    <a class="button -white" href="saiba-mais.html"
+                        >Saiba mais</a
+                    >
+                </div>
+            </section>
+
+            <section id="seguranca-do-trabalho" class="section media">
+                <picture>
+                    <source
+                        media="(min-width: 700px)"
+                        srcset="./assets/images/workplace-security.jpg"
+                    />
+                    <source
+                        media="(min-width: 375px)"
+                        srcset="./assets/images/workplace-security-md.jpg"
+                    />
+                    <source
+                        media="(max-width: 374.99px)"
+                        srcset="./assets/images/workplace-security-sm.jpg"
+                    />
+                    <img
+                        class="image"
+                        src="./assets/images/workplace-security.jpg"
+                        alt=""
+                    />
+                </picture>
+                <div class="stack">
+                    <h2 class="title">Segurança do trabalho</h2>
+                    <p>
+                        A Segurança do Trabalho é um conjunto e ciências e
+                        tecnologias que objetivam promover a integridade física
+                        e psíquica dos trabalhadores no local de trabalho em que
+                        atua através da adoção de medidas visando eliminar ou
+                        reduzir acidentes de trabalho e doenças ocupacionais.
+                    </p>
+
+                    <p>
+                        A Segurança do Trabalho é aplicada por meio de
+                        ferramentas de análise e controle/ redução/ eliminação
+                        de riscos, como por exemplo a adoção de Equipamentos de
+                        Proteção Individual e Coletiva (EPI’s e EPC’s),
+                        dinâmicas no trabalho, Mapas de risco, entre outros.
+                    </p>
+
+                    <a href="seguranca-do-trabalho.html" class="button -primary"
+                        >Saiba mais</a
+                    >
+                </div>
+            </section>
+
+            <section id="contato" class="section media">
+                <div class="stack">
+                    <h2 class="title">Dúvidas</h2>
+                    <p>
+                        Ainda tem dúvidas? Você pode baixar o Trabalho De
+                        Conclusão de Curso:
+                        <a href=""
+                            >A DEFASAGEM DE INFORMAÇÃO E OS IMPACTOS DO ESTRESSE
+                            EM TRABALHADORES TERCEIRIZADOS DA ÁREA DA LIMPEZA</a
+                        >, que foi o provedor do conteúdo aqui presente.
+                    </p>
+
+                    <p>
+                        Acessar o referencial teórico do mesmo para acessar
+                        conteúdos específicos com mais propriedades; ou entrar
+                        em contato conosco!
+                    </p>
+                </div>
+
+                <form action="" class="card width:100">
+                    <div class="body stack padding:2">
+                        <div class="field stack">
+                            <label for="name" class="label">Nome</label>
+                            <input
+                                class="input"
+                                type="text"
+                                name="name"
+                                id="name"
+                            />
+                        </div>
+
+                        <div class="field stack">
+                            <label for="email" class="label">E-mail</label>
+                            <input
+                                class="input"
+                                type="text"
+                                name="email"
+                                id="email"
+                            />
+                        </div>
+
+                        <div class="field stack">
+                            <label for="message" class="label"
+                                >Sua mensagem</label
+                            >
+                            <textarea
+                                class="input"
+                                name="message"
+                                id="message"
+                            ></textarea>
+                        </div>
+
+                        <button class="[ button -primary ] width:100">
+                            Enviar mensagem
+                        </button>
+                    </div>
+                </form>
+            </section>
         </main>
+
+        <button
+            id="theme-toggler"
+            class="button -rounded -fixed-right-bottom"
+            data-theme="light"
+        >
+            Light
+        </button>
+
+        <footer class="section -primary">
+            <div class="container text-align:center stack">
+                <h2 class="title">Meios de contato dos criadores</h2>
+                <a href="#" class="icon"
+                    ><img
+                        src="./assets/images/logo-facebook.svg"
+                        alt="Facebook"
+                        class="image"
+                /></a>
+
+                <a href="#" class="icon margin-x:2"
+                    ><img
+                        src="./assets/images/logo-email.svg"
+                        alt="E-mail"
+                        class="image"
+                /></a>
+
+                <a href="#" class="icon"
+                    ><img
+                        src="./assets/images/logo-instagram.svg"
+                        alt="Instagram"
+                        class="image"
+                /></a>
+            </div>
+        </footer>
+
+        <script src="./assets/js/script.js"></script>
     </body>
 </html>
