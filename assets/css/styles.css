@@ -26,7 +26,7 @@
     /* Typography */
     /* Familys */
     --serif: 'Roboto Slab', cambria, serif;
-    --sans-serif: Roboto, Arial, serif;
+    --sans-serif: 'Roboto', Arial, serif;
 
     /* scale */
     --font-base: 14px;
@@ -331,7 +331,7 @@ a {
 }
 
 .navigation.-floating {
-    color: #000;
+    color: var(--color-ui);
     background: var(--background-ui);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
@@ -344,7 +344,7 @@ a {
 
 .navigation .brand {
     font-family: var(--serif);
-    font-weight: bold;
+    font-weight: 500;
 }
 
 .navigation .menu {
@@ -366,7 +366,7 @@ a {
 }
 
 .navigation .menu.-open {
-    color: #000;
+    color: var(--color-ui);
     left: 0;
 }
 
@@ -420,7 +420,7 @@ a {
 }
 
 .hamburger.-open {
-    color: #000;
+    color: var(--color-ui);
 }
 
 .hamburger:focus {
